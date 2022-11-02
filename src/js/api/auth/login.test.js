@@ -1,5 +1,3 @@
-/* global _:readonly */
-
 import { login } from './login';
 
 function fetchSuccess(
