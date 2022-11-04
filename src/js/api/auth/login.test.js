@@ -1,5 +1,10 @@
 import { login } from './login';
 
+const userEmail = 'ChrTon31899@stud.noroff.no';
+const userPassword = 'VolvoXc70';
+
+const data = { email: userEmail, password: userPassword };
+
 function fetchSuccess(
   status = 201,
   statusText = 'All good! Take a nice coffee and relax'
@@ -8,6 +13,7 @@ function fetchSuccess(
     ok: true,
     status,
     statusText,
+    json: () => Promise.resolve(data),
   });
 }
 
@@ -25,15 +31,7 @@ function fetchFailure(
 describe('Login', () => {
   it('Success', async () => {
     global.fetch = jest.fn(() => fetchSuccess());
-    const data = await login();
-    expect(data).toBe('ChrTon31899@stud.noroff.no', 'VolvoXc70');
-  });
-});
-
-describe('Login', () => {
-  it('Fail', async () => {
-    global.fetch = jest.fn(() => fetchFailure());
-    const data = await login();
-    expect(data).toBe('ChrTon31899@stud.noroff.no', 'VolvoXc70');
+    const item = await login(data);
+    expect(item).toBe(data);
   });
 });
