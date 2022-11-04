@@ -43,17 +43,16 @@ The following list is describing how to install and congifure the different depe
 
 #### Prettier
 
-[Link to page](https://npm.io/package/prettier)
-
-install prettier as dev dependency
+**Install prettier as dev dependency**
 
 ```
 npm install --save-dev prettier
 ```
 
-#### eslint
+[Link to page](https://npm.io/package/prettier)
+---
 
-[Link to page](https://npm.io/package/eslint)
+#### eslint
 
 **Install eslint as dev**
 
@@ -82,9 +81,10 @@ npx eslint --init
     "lint-fix": "eslint src/**/*.js --cache --fix"
 ```
 
-#### Mrm
+[Link to page](https://npm.io/package/eslint)
+---
 
-[Link to page](https://npm.io/package/mrm)
+#### Mrm
 
 **Install Mrm, for pre-commit hooks to run eslint and prettier**
 
@@ -108,10 +108,10 @@ npx mrm@2 lint-staged
     ]
   }
 ```
+[Link to page](https://npm.io/package/mrm)
+---
 
 #### Jest
-
-[Link to page](https://npm.io/package/jest)
 
 **Install Jest for unit testing**
 
@@ -124,12 +124,12 @@ npm i -D jest@29.2.0
 ```json
 "test-unit": "jest"
 ```
+[Link to page](https://npm.io/package/jest)
+---
 
 #### eslint jest plugin
 
 **Install eslint jest plugin**
-
-[Link to page](https://npm.io/package/eslint-plugin-jest)
 
 ```
 npm i -D eslint-plugin-jest
@@ -161,12 +161,12 @@ npm i -D eslint-plugin-jest
     }
 }
 ```
+[Link to page](https://npm.io/package/eslint-plugin-jest)
+---
 
 #### Babel
 
 **Install Babel**
-
-[Link to page](https://npm.io/package/babel-npm-install)
 
 ```
 npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
@@ -179,10 +179,10 @@ npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
   "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
 }
 ```
+[Link to page](https://npm.io/package/babel-npm-install)
+---
 
 #### Cypress
-
-[Link to page](https://npm.io/package/eslint-plugin-cypress)
 
 **Install Cypress for end to end testing**
 
@@ -234,3 +234,6 @@ npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
   "rules": {}
 }
 ```
+
+[Link to page](https://npm.io/package/eslint-plugin-cypress)
+---
