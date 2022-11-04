@@ -1,1 +1,0 @@
-import remove from './remove';

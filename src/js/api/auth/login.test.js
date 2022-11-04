@@ -1,9 +1,12 @@
 import { login } from './login';
+import { index } from '../../storage/index.test';
 
 const userEmail = 'ChrTon31899@stud.noroff.no';
 const userPassword = 'VolvoXc70';
 
 const data = { email: userEmail, password: userPassword };
+
+const storage = index;
 
 function fetchSuccess(
   status = 201,
