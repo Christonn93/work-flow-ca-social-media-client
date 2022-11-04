@@ -7,7 +7,7 @@
 
 ## Project installing and running
 
-This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the [Dependencies](#dependencies) section of this readme. 
+This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the [Dependencies](#Dependencies) section of this readme. 
 
 
 After downloading the zip file run ==`npm init`==, this should start up with installing the dependencies for this project. 
@@ -37,7 +37,7 @@ Dependencies used is as follows.
 
 
 
-### Dependencies {#dependencies}
+### Dependencies
 
 #### Prettier
 
