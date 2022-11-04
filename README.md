@@ -1,9 +1,14 @@
 # CA | Workflow | Noroff
 
+---
+
 [![Automated Unit Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/unit_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/unit_testing.yml)
+
 [![Automated E2E Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml)
+
 [![Deploy static content to Pages](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml)
 
+---
 
 ## Project installing and running
 
@@ -26,9 +31,11 @@ Dependencies used is as follows.
 ## Information about the project
 
 This project is my delivery for the Course Assignemn in Workflow from Noroff. 
-It's ment to ==To improve the quality of an existing environment by establishing useful workflows that make the development process more efficient==
+It's ment to **To improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
 
-The assignemnt is going over how to work inside the terminal, how to plan and setup your own work enviorment. The porject is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/)
+The assignemnt is going over how to work inside the terminal, how to plan and setup your own work enviorment. The porject is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/). 
+
+
 
 
 
