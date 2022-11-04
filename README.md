@@ -25,10 +25,13 @@ Dependencies used is as follows.
 ## Information about the project
 
 This project is my delivery for the Course Assignemn in Workflow from Noroff. 
-It's ment to **To improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
+It's ment **to improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
 
 The assignemnt is going over how to work inside the terminal, how to plan and setup your own work enviorment. The porject is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/). 
 
+The code in the project repository is **forked** from a teachers repository and is ment to be illustrating how the student's could have created the cousre assignment from javascript 2. 
+
+The project itself is a sosial media platfrom that is using Noroff's API. You can create posts, read other's posts and interact with other user's.
 
 Github actions that is setted up
 ---
