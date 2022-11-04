@@ -10,10 +10,11 @@
 This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the [Dependencies](#Dependencies) section of this readme. 
 
 
-After downloading the zip file run ==`npm init`==, this should start up with installing the dependencies for this project. 
+After downloading the zip file run `npm init`, this should start up with installing the dependencies for this project. 
 
----
+
 Dependencies used is as follows. 
+---
 
 1. [Prettier](https://prettier.io/)
 2. [ESlint](https://eslint.org/)
@@ -22,7 +23,12 @@ Dependencies used is as follows.
 5. [Babel](https://babeljs.io/)
 6. [Cypress](https://www.cypress.io/)
 
+## Information about the project
 
+This project is my delivery for the Course Assignemn in Workflow from Noroff. 
+It's ment to ==To improve the quality of an existing environment by establishing useful workflows that make the development process more efficient==
+
+The assignemnt is going over how to work inside the terminal, how to plan and setup your own work enviorment. The porject is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/)
 
 
 
