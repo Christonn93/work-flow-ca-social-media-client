@@ -4,32 +4,29 @@
 [![Automated E2E Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml)
 [![Deploy static content to Pages](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml)
 
-
 ## Information about the project
 
-This project is my delivery for the Course Assignemn in Workflow from Noroff. 
-It's ment **to improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
+This project is my delivery for the Course Assignment in Workflow from Noroff.
+It's meant **to improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
 
-The assignemnt is going over how to work inside the terminal, how to plan and setup your own work enviorment. The porject is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/). 
+The assignment is going over how to work inside the terminal, how to plan and setup your own work environment. The project is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/).
 
-The code in the project repository is **forked** from a teachers repository and is ment to be illustrating how the student's could have created the cousre assignment from javascript 2. 
+The code in the project repository is **forked** from a teachers repository and is meant to be illustrating how the student's could have created the course assignment from javascript 2.
 
-The project itself is a sosial media platfrom that is using Noroff's API. You can create posts, read other's posts and interact with other user's.
+The project itself is a social media platform that is using Noroff's API. You can create posts, read other's posts and interact with other user's.
 
 ---
 
 ## Project installing and running
 
-This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the [Dependencies](#Dependencies) section of this readme. 
+This project have a lot fo dependencies that need to set up. If any if them is failing refer to the [Dependencies](#Dependencies) section of this readme.
 
+After downloading the zip file run `npm init`, this should start up with installing the dependencies for this project.
 
-After downloading the zip file run `npm init`, this should start up with installing the dependencies for this project. 
+If the style is not showing up, make sure to run `npm run build`. This will run the build script to create css from scss files.
+When working with the project and doing style changes, its recommended to run `npm run start`. This will run a script that is watching the changes that is done and applying changes on save of the file.
 
-If the style is not showing up, make sure to run `npm run build`. This will run the build script to create css from scss files. 
-When workign with the project and doing styyle changes, its recommended to run `npm run start`. This will run a script that is watching the changes that is done and applays them on save of the file. 
-
-
-Dependencies used is as follows. 
+Dependencies used is as follows.
 ---
 
 1. [Prettier](https://prettier.io/) - An opinionated code formatter
@@ -38,20 +35,19 @@ Dependencies used is as follows.
 4. [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 5. [Babel](https://babeljs.io/) - Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
 6. [Cypress](https://www.cypress.io/) - Cypress is the new standard in front-end testing that every developer and QA engineer needs.
-7. [Bootstrap](https://npm.io/package/bootstrap) - Powerful, extensible, and feature-packed frontend toolkit. 
-8. [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 
+7. [Bootstrap](https://npm.io/package/bootstrap) - Powerful, extensible, and feature-packed frontend toolkit.
+8. [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
-Github actions that is setted up
+Github actions that is set up
 ---
 
 1. Deploying to github pages
 2. Running end to end testing
 3. Running unit testing
 
-
 ### Dependencies
 
-The following list is describing how to install and congifure the different dependencies used in this project. If there is any dependencies that is breaking, please refere to this section and install them again. 
+The following list is describing how to install and configure the different dependencies used in this project. If there is any dependencies that is breaking, please referee to this section and install them again.
 
 #### Bootstrap
 
@@ -93,6 +89,7 @@ npx eslint --init
 ```
 
 In the command line you will choose these options:
+
 ```
 ✔ How would you like to use ESLint? · problems
 ✔ What type of modules does your project use? · esm
@@ -136,6 +133,7 @@ Updated package.json tasks
     ]
   }
 ```
+
 > [Link to page](https://npm.io/package/mrm)
 
 
@@ -152,8 +150,8 @@ Updated package.json scripts
 ```json
 "test-unit": "jest"
 ```
-> [Link to page](https://npm.io/package/jest)
 
+> [Link to page](https://npm.io/package/jest)
 
 #### ESlint Jest plugin
 
@@ -189,6 +187,7 @@ Update eslint configuration
     }
 }
 ```
+
 > [Link to page](https://npm.io/package/eslint-plugin-jest)
 
 #### Babel
@@ -206,8 +205,8 @@ Add babel.config.json and add configuration
   "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
 }
 ```
-> [Link to page](https://npm.io/package/babel-npm-install)
 
+> [Link to page](https://npm.io/package/babel-npm-install)
 
 #### Cypress
 
@@ -261,4 +260,5 @@ Updated eslint config
   "rules": {}
 }
 ```
+
 > [Link to page](https://npm.io/package/eslint-plugin-cypress)
