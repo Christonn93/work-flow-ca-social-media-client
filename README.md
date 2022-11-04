@@ -25,6 +25,9 @@ This project have a lot fo dependencies that need to be setted up. If any if the
 
 After downloading the zip file run `npm init`, this should start up with installing the dependencies for this project. 
 
+If the style is not showing up, make sure to run `npm run build`. This will run the build script to create css from scss files. 
+When workign with the project and doing styyle changes, its recommended to run `npm run start`. This will run a script that is watching the changes that is done and applays them on save of the file. 
+
 
 Dependencies used is as follows. 
 ---
@@ -35,6 +38,8 @@ Dependencies used is as follows.
 4. [Jest](https://jestjs.io/)
 5. [Babel](https://babeljs.io/)
 6. [Cypress](https://www.cypress.io/)
+7. [Bootstrap](https://npm.io/package/bootstrap)
+8. [SCSS](https://npm.io/package/scss)
 
 Github actions that is setted up
 ---
@@ -47,6 +52,21 @@ Github actions that is setted up
 ### Dependencies
 
 The following list is describing how to install and congifure the different dependencies used in this project. If there is any dependencies that is breaking, please refere to this section and install them again. 
+
+#### Bootstrap
+
+Installing Bootstrap
+
+```
+npm i bootstrap
+```
+
+#### SCSS
+
+Installing SCSS
+```
+npm i scss
+```
 
 #### Prettier
 
