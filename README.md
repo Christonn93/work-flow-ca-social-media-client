@@ -32,14 +32,14 @@ When workign with the project and doing styyle changes, its recommended to run `
 Dependencies used is as follows. 
 ---
 
-1. [Prettier](https://prettier.io/)
-2. [ESlint](https://eslint.org/)
-3. [Mrm](https://www.npmjs.com/package/mrm-task-lint-staged)
-4. [Jest](https://jestjs.io/)
-5. [Babel](https://babeljs.io/)
-6. [Cypress](https://www.cypress.io/)
-7. [Bootstrap](https://npm.io/package/bootstrap)
-8. [SCSS](https://npm.io/package/scss)
+1. [Prettier](https://prettier.io/) - An opinionated code formatter
+2. [ESlint](https://eslint.org/) - ESLint statically analyzes your code to quickly find problems.
+3. [Mrm](https://www.npmjs.com/package/mrm-task-lint-staged) - This tasks will try to infer extensions from your npm scripts
+4. [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+5. [Babel](https://babeljs.io/) - Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
+6. [Cypress](https://www.cypress.io/) - Cypress is the new standard in front-end testing that every developer and QA engineer needs.
+7. [Bootstrap](https://npm.io/package/bootstrap) - Powerful, extensible, and feature-packed frontend toolkit. 
+8. [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 
 
 Github actions that is setted up
 ---
@@ -61,7 +61,7 @@ Installing Bootstrap
 npm i bootstrap
 ```
 
-#### SCSS
+#### SASS/SCSS
 
 Installing SCSS
 ```
