@@ -7,10 +7,37 @@
 
 ## Project installing and running
 
-> This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the dependencie section of this readme. 
+This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the [Dependencies](#dependencies) section of this readme. 
 
 
-### Dependencies
+After downloading the zip file run ==`npm init`==, this should start up with installing the dependencies for this project. 
+
+---
+Dependencies used is as follows. 
+
+1. [Prettier](https://prettier.io/)
+2. [ESlint](https://eslint.org/)
+3. [Mrm](https://www.npmjs.com/package/mrm-task-lint-staged)
+4. [Jest](https://jestjs.io/)
+5. [Babel](https://babeljs.io/)
+6. [Cypress](https://www.cypress.io/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Dependencies {#dependencies}
 
 #### Prettier
 
