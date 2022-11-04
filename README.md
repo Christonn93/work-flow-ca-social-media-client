@@ -65,14 +65,14 @@ ESlint setup
 
 ```
 npx eslint --init
-
-✔ How would you like to use ESLint? · problems
-✔ What type of modules does your project use? · esm
-✔ Which framework does your project use? · none
-✔ Does your project use TypeScript? · No
-✔ Where does your code run? · browser
-✔ What format do you want your config file to be in? · JSON
 ```
+
+> ✔ How would you like to use ESLint? · problems
+> ✔ What type of modules does your project use? · esm
+> ✔ Which framework does your project use? · none
+> ✔ Does your project use TypeScript? · No
+> ✔ Where does your code run? · browser
+> ✔ What format do you want your config file to be in? · JSON
 
 Updated package.json scripts
 
