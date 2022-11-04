@@ -52,7 +52,6 @@ npm install --save-dev prettier
 [Link to page](https://npm.io/package/prettier)
 
 #### ESlint
----
 
 Install eslint as dev
 
@@ -87,7 +86,6 @@ Updated package.json scripts
 [Link to page](https://npm.io/package/eslint)
 
 #### Mrm
----
 
 Install Mrm, for pre-commit hooks to run eslint and prettier
 
@@ -115,7 +113,6 @@ Updated package.json tasks
 
 
 #### Jest
----
 
 Install Jest for unit testing
 
@@ -132,7 +129,6 @@ Updated package.json scripts
 
 
 #### eslint jest plugin
----
 
 Install eslint jest plugin
 
@@ -169,7 +165,6 @@ Update eslint configuration
 [Link to page](https://npm.io/package/eslint-plugin-jest)
 
 #### Babel
----
 
 Install Babel
 
@@ -188,7 +183,6 @@ Add babel.config.json and add configuration
 
 
 #### Cypress
----
 
 Install Cypress for end to end testing
 
@@ -240,5 +234,4 @@ Updated eslint config
   "rules": {}
 }
 ```
-
 [Link to page](https://npm.io/package/eslint-plugin-cypress)
