@@ -3,7 +3,6 @@
 [![Automated Unit Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/unit_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/unit_testing.yml)
 [![Automated E2E Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml)
 [![Deploy static content to Pages](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml)
----
 
 ## Project installing and running
 
@@ -32,25 +31,19 @@ The assignemnt is going over how to work inside the terminal, how to plan and se
 
 
 Github actions that is setted up
-: Deploying to github pages
-: Running end to end testing
-: Running unit testing
-
-
-
-
-
-
-
-
-
-
-
+---
+1. Deploying to github pages
+2. Running end to end testing
+3. Running unit testing
 
 
 ### Dependencies
 
+The following list is describing how to install and congifure the different dependencies used in this project. If there is any dependencies that is breaking, please refere to this section and install them again. 
+
 #### Prettier
+
+[Link to page](https://npm.io/package/prettier)
 
 install prettier as dev dependency
 
@@ -60,13 +53,15 @@ npm install --save-dev prettier
 
 #### eslint
 
-install eslint as dev
+[Link to page](https://npm.io/package/eslint)
+
+**Install eslint as dev**
 
 ```
 npm install eslint --save-dev
 ```
 
-setup eslint
+**ESlint setup** 
 
 ```
 npx eslint --init
@@ -79,9 +74,9 @@ npx eslint --init
 ✔ What format do you want your config file to be in? · JSON
 ```
 
-Update scripts in package file
+**Updated package.json scripts**
 
-```
+```json
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix"
@@ -89,15 +84,17 @@ Update scripts in package file
 
 #### Mrm
 
-Install Mrm, for pre-commit hooks to run eslint and prettier;
+[Link to page](https://npm.io/package/mrm)
+
+**Install Mrm, for pre-commit hooks to run eslint and prettier**
 
 ```
 npx mrm@2 lint-staged
 ```
 
-Update package file with tasks
+**Updated package.json tasks**
 
-```
+```json
 "lint-staged": {
     "*.js": [
       "prettier --write",
@@ -114,29 +111,33 @@ Update package file with tasks
 
 #### Jest
 
-Install Jest for unit testing.
+[Link to page](https://npm.io/package/jest)
+
+**Install Jest for unit testing**
 
 ```
 npm i -D jest@29.2.0
 ```
 
-Update scripts in package
+**Updated package.json scripts**
 
-```
+```json
 "test-unit": "jest"
 ```
 
 #### eslint jest plugin
 
-Install eslint jest plugin
+**Install eslint jest plugin**
+
+[Link to page](https://npm.io/package/eslint-plugin-jest)
 
 ```
 npm i -D eslint-plugin-jest
 ```
 
-Update eslint configuration
+**Update eslint configuration**
 
-```
+```json
 {
   "env": {
         "browser": true,
@@ -163,15 +164,17 @@ Update eslint configuration
 
 #### Babel
 
-Install Babel
+**Install Babel**
+
+[Link to page](https://npm.io/package/babel-npm-install)
 
 ```
 npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
 ```
 
-add babel.config.json and add configuration
+**Add babel.config.json and add configuration**
 
-```
+```json
 {
   "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
 }
@@ -179,24 +182,26 @@ add babel.config.json and add configuration
 
 #### Cypress
 
-Install Cypress for end to end testing
+[Link to page](https://npm.io/package/eslint-plugin-cypress)
+
+**Install Cypress for end to end testing**
 
 ```
 npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
 ```
 
-Updated scripts
+**Updated package.json scripts**
 
-```
+```json
     "test": "npm run test-unit && npm run test-e2e-cli",
     "test-unit": "jest",
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run"
 ```
 
-Updated eslint config
+**Updated eslint config**
 
-```
+```json
 {
   "env": {
     "browser": true,
