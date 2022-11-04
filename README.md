@@ -49,7 +49,7 @@ Install prettier as dev dependency
 npm install --save-dev prettier
 ```
 
-[Link to page](https://npm.io/package/prettier)
+> [Link to page](https://npm.io/package/prettier)
 
 #### ESlint
 
@@ -83,7 +83,7 @@ Updated package.json scripts
     "lint-fix": "eslint src/**/*.js --cache --fix"
 ```
 
-[Link to page](https://npm.io/package/eslint)
+> [Link to page](https://npm.io/package/eslint)
 
 #### Mrm
 
@@ -109,7 +109,7 @@ Updated package.json tasks
     ]
   }
 ```
-[Link to page](https://npm.io/package/mrm)
+> [Link to page](https://npm.io/package/mrm)
 
 
 #### Jest
@@ -125,10 +125,10 @@ Updated package.json scripts
 ```json
 "test-unit": "jest"
 ```
-[Link to page](https://npm.io/package/jest)
+> [Link to page](https://npm.io/package/jest)
 
 
-#### eslint jest plugin
+#### ESlint Jest plugin
 
 Install eslint jest plugin
 
@@ -162,7 +162,7 @@ Update eslint configuration
     }
 }
 ```
-[Link to page](https://npm.io/package/eslint-plugin-jest)
+> [Link to page](https://npm.io/package/eslint-plugin-jest)
 
 #### Babel
 
@@ -179,7 +179,7 @@ Add babel.config.json and add configuration
   "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
 }
 ```
-[Link to page](https://npm.io/package/babel-npm-install)
+> [Link to page](https://npm.io/package/babel-npm-install)
 
 
 #### Cypress
@@ -234,4 +234,4 @@ Updated eslint config
   "rules": {}
 }
 ```
-[Link to page](https://npm.io/package/eslint-plugin-cypress)
+> [Link to page](https://npm.io/package/eslint-plugin-cypress)
