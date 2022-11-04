@@ -50,6 +50,7 @@ npm install --save-dev prettier
 ```
 
 [Link to page](https://npm.io/package/prettier)
+
 ---
 
 #### eslint
@@ -82,6 +83,7 @@ npx eslint --init
 ```
 
 [Link to page](https://npm.io/package/eslint)
+
 ---
 
 #### Mrm
@@ -109,6 +111,7 @@ npx mrm@2 lint-staged
   }
 ```
 [Link to page](https://npm.io/package/mrm)
+
 ---
 
 #### Jest
@@ -125,6 +128,7 @@ npm i -D jest@29.2.0
 "test-unit": "jest"
 ```
 [Link to page](https://npm.io/package/jest)
+
 ---
 
 #### eslint jest plugin
@@ -162,6 +166,7 @@ npm i -D eslint-plugin-jest
 }
 ```
 [Link to page](https://npm.io/package/eslint-plugin-jest)
+
 ---
 
 #### Babel
@@ -180,6 +185,7 @@ npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
 }
 ```
 [Link to page](https://npm.io/package/babel-npm-install)
+
 ---
 
 #### Cypress
@@ -236,4 +242,5 @@ npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
 ```
 
 [Link to page](https://npm.io/package/eslint-plugin-cypress)
+
 ---
