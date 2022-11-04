@@ -4,13 +4,23 @@
 [![Automated E2E Testing](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/e2e_testing.yml)
 [![Deploy static content to Pages](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml/badge.svg?branch=workflow-ca)](https://github.com/Christonn93/work-flow-ca-social-media-client/actions/workflows/deploy_pages.yml)
 
-## Initial setup steps
+
+## Project installing and running
+
+> This project have a lot fo dependencies that need to be setted up. If any if them is failing refer to the dependencie section of this readme. 
+
+
+### Dependencies
+
+#### Prettier
 
 install prettier as dev dependency
 
 ```
 npm install --save-dev prettier
 ```
+
+#### eslint
 
 install eslint as dev
 
@@ -39,6 +49,8 @@ Update scripts in package file
     "lint-fix": "eslint src/**/*.js --cache --fix"
 ```
 
+#### Mrm
+
 Install Mrm, for pre-commit hooks to run eslint and prettier;
 
 ```
@@ -62,6 +74,8 @@ Update package file with tasks
   }
 ```
 
+#### Jest
+
 Install Jest for unit testing.
 
 ```
@@ -73,6 +87,8 @@ Update scripts in package
 ```
 "test-unit": "jest"
 ```
+
+#### eslint jest plugin
 
 Install eslint jest plugin
 
@@ -107,6 +123,8 @@ Update eslint configuration
 }
 ```
 
+#### Babel
+
 Install Babel
 
 ```
@@ -120,6 +138,8 @@ add babel.config.json and add configuration
   "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
 }
 ```
+
+#### Cypress
 
 Install Cypress for end to end testing
 
