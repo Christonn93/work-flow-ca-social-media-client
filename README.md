@@ -43,7 +43,7 @@ The following list is describing how to install and congifure the different depe
 
 #### Prettier
 
-**Install prettier as dev dependency**
+Install prettier as dev dependency
 
 ```
 npm install --save-dev prettier
@@ -53,15 +53,15 @@ npm install --save-dev prettier
 
 ---
 
-#### eslint
+#### ESlint
 
-**Install eslint as dev**
+Install eslint as dev
 
 ```
 npm install eslint --save-dev
 ```
 
-**ESlint setup** 
+ESlint setup
 
 ```
 npx eslint --init
@@ -74,7 +74,7 @@ npx eslint --init
 ✔ What format do you want your config file to be in? · JSON
 ```
 
-**Updated package.json scripts**
+Updated package.json scripts
 
 ```json
     "format": "prettier -w src/**/*.js",
@@ -88,13 +88,13 @@ npx eslint --init
 
 #### Mrm
 
-**Install Mrm, for pre-commit hooks to run eslint and prettier**
+Install Mrm, for pre-commit hooks to run eslint and prettier
 
 ```
 npx mrm@2 lint-staged
 ```
 
-**Updated package.json tasks**
+Updated package.json tasks
 
 ```json
 "lint-staged": {
@@ -116,13 +116,13 @@ npx mrm@2 lint-staged
 
 #### Jest
 
-**Install Jest for unit testing**
+Install Jest for unit testing
 
 ```
 npm i -D jest@29.2.0
 ```
 
-**Updated package.json scripts**
+Updated package.json scripts
 
 ```json
 "test-unit": "jest"
@@ -133,13 +133,13 @@ npm i -D jest@29.2.0
 
 #### eslint jest plugin
 
-**Install eslint jest plugin**
+Install eslint jest plugin
 
 ```
 npm i -D eslint-plugin-jest
 ```
 
-**Update eslint configuration**
+Update eslint configuration
 
 ```json
 {
@@ -171,13 +171,13 @@ npm i -D eslint-plugin-jest
 
 #### Babel
 
-**Install Babel**
+Install Babel
 
 ```
 npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
 ```
 
-**Add babel.config.json and add configuration**
+Add babel.config.json and add configuration
 
 ```json
 {
@@ -190,13 +190,13 @@ npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
 
 #### Cypress
 
-**Install Cypress for end to end testing**
+Install Cypress for end to end testing
 
 ```
 npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
 ```
 
-**Updated package.json scripts**
+Updated package.json scripts
 
 ```json
     "test": "npm run test-unit && npm run test-e2e-cli",
@@ -205,7 +205,7 @@ npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
     "test-e2e-cli": "cypress run"
 ```
 
-**Updated eslint config**
+Updated eslint config
 
 ```json
 {
