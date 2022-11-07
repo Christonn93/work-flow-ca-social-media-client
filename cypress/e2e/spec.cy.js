@@ -1,6 +1,7 @@
 describe('The Home Page', () => {
   it('successfully loads', () => {
     cy.visit('/');
+    cy.clearLocalStorage();
   });
 });
 
@@ -21,14 +22,11 @@ describe('Logging user in', () => {
   });
 
   it('Logging in user', () => {
-    const email = 'ChrTon31899@stud.noroff.no';
-    const password = 'VolvoXc70!';
-
     cy.get('#loginForm')
       .find('#loginEmail')
-      .type(email)
+      .type(Cypress.env('API_EMAIL'))
       .find('#loginPassword')
-      .type(`${password}{enter}`)
+      .type(Cypress.env('API_PASSWORD'))
       .get('.modal-footer')
       .find('button[data-bs-dismiss="modal"]')
       .click();
