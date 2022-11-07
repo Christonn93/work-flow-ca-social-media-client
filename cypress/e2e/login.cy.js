@@ -115,21 +115,3 @@ describe('Testing login with correct input values', () => {
       .should('include', 'profile');
   });
 });
-
-// Logout testing
-describe('Logging out', () => {
-  it('successfully loads', () => {
-    cy.get('button[data-auth="logout"]').wait(500).click();
-  });
-
-  it('Closing modal', () => {
-    cy.get('#registerModal')
-      .should('be.visible')
-      .find('.modal-footer')
-      .find('button[type="reset"]')
-      .wait(500)
-      .should('contain', 'Close')
-      .click()
-      .wait(500);
-  });
-});
