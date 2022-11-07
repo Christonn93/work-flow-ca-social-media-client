@@ -42,7 +42,11 @@ describe('Testing login with incorrect email', () => {
       .find('button')
       .contains('Login')
       .click()
-      .wait(2000);
+      .wait(2000)
+      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
+      .url()
+      .should('not.include', 'profile');
   });
 });
 
@@ -70,7 +74,11 @@ describe('Testing login with incorrect password and Email', () => {
       .find('button')
       .contains('Login')
       .click()
-      .wait(2000);
+      .wait(2000)
+      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
+      .url()
+      .should('not.include', 'profile');
   });
 
   // Login testing with correct credentials
@@ -97,7 +105,13 @@ describe('Testing login with incorrect password and Email', () => {
         .find('button')
         .contains('Login')
         .click()
-        .wait(2000);
+        .wait(2000)
+        .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
+        .then(
+          () => expect(window.localStorage.getItem('profile')).to.not.be.null
+        )
+        .url()
+        .should('include', 'profile');
     });
 
     it('Open new form', () => {
@@ -106,9 +120,8 @@ describe('Testing login with incorrect password and Email', () => {
         .find('a')
         .contains('New Post')
         .wait(200)
-        .url()
-        .should('include', 'post')
-        .click();
+        .click()
+        .visit('/?view=post');
     });
   });
 
