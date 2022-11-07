@@ -28,8 +28,9 @@ describe('Testing login with incorrect email', () => {
   });
 
   it('Adding login credentials', () => {
-    cy.get('#loginForm').wait(500);
-    cy.get('#loginEmail')
+    cy.get('#loginForm')
+      .wait(500)
+      .get('#loginEmail')
       .clear()
       .wait(500)
       .type(`${email}`)
@@ -43,10 +44,15 @@ describe('Testing login with incorrect email', () => {
       .contains('Login')
       .click()
       .wait(2000)
-      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
-      .url()
-      .should('not.include', 'profile');
+      .then(() => expect(window.localStorage.getItem('token')).to.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
+  });
+
+  // Trow alert
+  it('Throw alert', () => {
+    cy.on('window:alert', (text) => {
+      expect(text).to.eq('Wrong input data...');
+    });
   });
 });
 
@@ -60,8 +66,9 @@ describe('Testing login with incorrect password and Email', () => {
   });
 
   it('Adding login credentials', () => {
-    cy.get('#loginForm').wait(500);
-    cy.get('#loginEmail')
+    cy.get('#loginForm')
+      .wait(500)
+      .get('#loginEmail')
       .clear()
       .wait(500)
       .type(`${email}`)
@@ -75,10 +82,15 @@ describe('Testing login with incorrect password and Email', () => {
       .contains('Login')
       .click()
       .wait(2000)
-      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
-      .url()
-      .should('not.include', 'profile');
+      .then(() => expect(window.localStorage.getItem('token')).to.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
+  });
+
+  // Trow alert
+  it('Throw alert', () => {
+    cy.on('window:alert', (text) => {
+      expect(text).to.eq('Wrong input data...');
+    });
   });
 });
 
@@ -92,8 +104,9 @@ describe('Testing login with correct input values', () => {
   });
 
   it('Adding login credentials', () => {
-    cy.get('#loginForm').wait(500);
-    cy.get('#loginEmail')
+    cy.get('#loginForm')
+      .wait(500)
+      .get('#loginEmail')
       .clear()
       .wait(500)
       .type(`${email}`)
@@ -112,24 +125,28 @@ describe('Testing login with correct input values', () => {
       .url()
       .should('include', 'profile');
   });
-
-  it('Open new form', () => {
-    cy.get('footer')
-      .wait(500)
-      .find('a')
-      .contains('New Post')
-      .wait(200)
-      .click()
-      .visit('/?view=post');
-  });
 });
 
 // Logout testing
-// describe('Logging out', () => {
-//   it('successfully loads', () => {
-//     cy.visit('/')
-//     .wait(2000)
-//     .get('button[data-auth="logout"]')
-//     .click();
-//   });
-// });
+describe('Logging out', () => {
+  it('successfully loads', () => {
+    cy.get('button[data-auth="logout"]').wait(500).click();
+  });
+
+  it('Closing modal', () => {
+    cy.get('#registerModal')
+      .should('be.visible')
+      .find('.modal-footer')
+      .find('button[type="reset"]')
+      .wait(500)
+      .should('contain', 'Close')
+      .click()
+      .wait(500);
+  });
+
+  it('Throw alert', () => {
+    cy.on('window:alert', (text) => {
+      expect(text).to.eq('You are logged out :D');
+    });
+  });
+});
