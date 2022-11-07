@@ -1,7 +1,10 @@
 describe('The Home Page', () => {
   it('successfully loads', () => {
-    cy.visit('/');
-    cy.clearLocalStorage();
+    cy.visit('/')
+      .clearLocalStorage()
+      .get('header')
+      .find('button[data-auth="login"]')
+      .click();
   });
 });
 
@@ -17,13 +20,12 @@ describe('Closing modal', () => {
 });
 
 describe('Logging user in', () => {
-  it('Open login modal', () => {
-    cy.get('header').find('button[data-auth="login"]').click();
+  it('Logging in user', () => {
+    cy.get('#loginForm');
   });
 
-  it('Logging in user', () => {
-    cy.get('#loginForm')
-      .find('#loginEmail')
+  it('adding login details', () => {
+    cy.find('#loginEmail')
       .type(Cypress.env('API_EMAIL'))
       .find('#loginPassword')
       .type(Cypress.env('API_PASSWORD'))
