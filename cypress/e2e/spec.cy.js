@@ -5,7 +5,7 @@ describe('The Home Page', () => {
   });
 });
 
-describe('Closing modal', () => {
+describe('Closing register modal', () => {
   it('Closing modal', () => {
     cy.get('#registerModal')
       .should('be.visible')
@@ -18,25 +18,36 @@ describe('Closing modal', () => {
   });
 });
 
-describe('Logging user in', () => {
+describe('Opening login modal', () => {
   it('Open login modal', () => {
     cy.get('header').find('button[data-auth="login"]').click();
   });
 
-  it('Logging in user', () => {
-    cy.get('#loginForm');
-  });
-
-  it('adding login details', () => {
+  it('Adding login credentials', () => {
+    cy.get('#loginForm').wait(500);
     cy.get('#loginEmail')
+      .wait(500)
       .type(Cypress.env('API_EMAIL'))
       .wait(500)
       .get('#loginPassword')
       .type(Cypress.env('API_PASSWORD'))
       .wait(500)
       .get('.modal-footer')
-      .find('button[data-bs-dismiss="modal"]')
+      .find('button')
+      .contains('Login')
       .click()
-      .wait(500);
+      .wait(2000);
+  });
+
+  it('Validate user Email', () => {
+    cy.visit('/').wait(500);
+  });
+
+  it('Validate user Password', () => {
+    cy.visit('/').wait(500);
+  });
+
+  it('Returns if input is invalid', () => {
+    cy.visit('/').wait(500);
   });
 });
