@@ -30,10 +30,10 @@ describe('Opening login modal', () => {
     cy.get('#loginForm').wait(500);
     cy.get('#loginEmail')
       .wait(500)
-      .type(email)
+      .type(`${email}`)
       .wait(500)
       .get('#loginPassword')
-      .type(password)
+      .type(`${password}`)
       .wait(500)
       .get('.modal-footer')
       .find('button')
