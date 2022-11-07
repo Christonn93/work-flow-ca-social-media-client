@@ -44,7 +44,7 @@ describe('Testing login with incorrect email', () => {
       .find('button')
       .contains('Login')
       .click()
-      .wait(2000)
+      .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
       .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
   });
@@ -75,7 +75,7 @@ describe('Testing login with incorrect password and Email', () => {
       .find('button')
       .contains('Login')
       .click()
-      .wait(2000)
+      .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
       .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
   });
@@ -106,7 +106,7 @@ describe('Testing login with correct input values', () => {
       .find('button')
       .contains('Login')
       .click()
-      .wait(2000)
+      .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
       .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
       .url()
