@@ -19,6 +19,9 @@ describe('Closing register modal', () => {
 });
 
 describe('Opening login modal', () => {
+  const email = Cypress.env('API_EMAIL');
+  const password = Cypress.env('API_PASSWORD');
+
   it('Open login modal', () => {
     cy.get('header').find('button[data-auth="login"]').click();
   });
@@ -27,27 +30,15 @@ describe('Opening login modal', () => {
     cy.get('#loginForm').wait(500);
     cy.get('#loginEmail')
       .wait(500)
-      .type(Cypress.env('API_EMAIL'))
+      .type(email)
       .wait(500)
       .get('#loginPassword')
-      .type(Cypress.env('API_PASSWORD'))
+      .type(password)
       .wait(500)
       .get('.modal-footer')
       .find('button')
       .contains('Login')
       .click()
       .wait(2000);
-  });
-
-  it('Validate user Email', () => {
-    cy.visit('/').wait(500);
-  });
-
-  it('Validate user Password', () => {
-    cy.visit('/').wait(500);
-  });
-
-  it('Returns if input is invalid', () => {
-    cy.visit('/').wait(500);
   });
 });
