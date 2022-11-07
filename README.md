@@ -38,7 +38,7 @@ Dependencies used is as follows.
 7. [Bootstrap](https://npm.io/package/bootstrap) - Powerful, extensible, and feature-packed frontend toolkit.
 8. [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 9. [Vite](https://vitejs.dev/) - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
-10.[dotenv](https://github.com/motdotla/dotenv#readme) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
+10. [dotenv](https://github.com/motdotla/dotenv#readme) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 
 Github actions that is set up
 ---
@@ -298,3 +298,49 @@ Updated eslint config
 ```
 
 > [Link to page](https://npm.io/package/eslint-plugin-cypress)
+
+#### Dotenv
+
+Install dotenv
+
+```md
+npm install -D dotenv
+```
+
+Modify the cypress.config.js to match this setup to import .env variables which can be called in tests using Cypress.env("key").
+
+```js
+require("dotenv").config();
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      config.env = {
+        ...process.env,
+        ...config.env,
+      };
+      return config;
+    },
+  },
+});
+```
+
+Create .env file in root and add, filling it with your own details for Cypress testing
+
+```md
+API_EMAIL=*Add your email for the api here* **Email saved on github secrets**
+API_PASSWORD=*Add your password for the api here* **Password saved on github secrets**
+```
+
+Add `.env` to `.gitignore` file, should now be
+
+```md
+/node_modules
+/dist
+/cypress/screenshots
+/cypress/videos
+.env
+```
+
+> [Link to page](https://github.com/motdotla/dotenv#readme)
