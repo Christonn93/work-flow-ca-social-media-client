@@ -77,9 +77,7 @@ describe('Testing login with incorrect password and Email', () => {
       .click()
       .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.be.null)
-      .url()
-      .should('not.include', 'profile');
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
   });
 });
 
