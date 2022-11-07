@@ -1,3 +1,10 @@
+describe('The Home Page', () => {
+  it('successfully loads', () => {
+    cy.visit('/');
+    cy.clearLocalStorage();
+  });
+});
+
 // Logout testing
 describe('Testing login with correct input values', () => {
   const email = Cypress.env('API_EMAIL');
