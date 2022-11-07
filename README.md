@@ -37,6 +37,7 @@ Dependencies used is as follows.
 6. [Cypress](https://www.cypress.io/) - Cypress is the new standard in front-end testing that every developer and QA engineer needs.
 7. [Bootstrap](https://npm.io/package/bootstrap) - Powerful, extensible, and feature-packed frontend toolkit.
 8. [SASS](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+9. [Vite](https://vitejs.dev/) - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 Github actions that is set up
 ---
@@ -49,18 +50,53 @@ Github actions that is set up
 
 The following list is describing how to install and configure the different dependencies used in this project. If there is any dependencies that is breaking, please referee to this section and install them again.
 
+#### Vite
+
+```md
+npm install -D vite
+```
+
+Add this to package.json
+
+```json
+    "dev": "vite",
+    "vite-build": "vite build",
+    "vite-preview": "vite preview"
+```
+
+Vite configuration.
+
+```js
+export default {
+  server: {
+    port: 5173,
+    hot: true,
+    host: '127.0.0.1',
+  },
+};
+```
+
+After setting this up you can run
+
+```md
+npm run dev
+```
+
+Open your browser and go to `http://127.0.0.1:5173`to see your server running
+
 #### Bootstrap
 
 Installing Bootstrap
 
-```
+```md
 npm i bootstrap
 ```
 
 #### SASS/SCSS
 
 Installing SCSS
-```
+
+```md
 npm i scss
 ```
 
@@ -68,7 +104,7 @@ npm i scss
 
 Install prettier as dev dependency
 
-```
+```md
 npm install --save-dev prettier
 ```
 
@@ -78,19 +114,19 @@ npm install --save-dev prettier
 
 Install eslint as dev
 
-```
+```md
 npm install eslint --save-dev
 ```
 
 ESlint setup
 
-```
+```md
 npx eslint --init
 ```
 
 In the command line you will choose these options:
 
-```
+```md
 ✔ How would you like to use ESLint? · problems
 ✔ What type of modules does your project use? · esm
 ✔ Which framework does your project use? · none
@@ -113,7 +149,7 @@ Updated package.json scripts
 
 Install Mrm, for pre-commit hooks to run eslint and prettier
 
-```
+```md
 npx mrm@2 lint-staged
 ```
 
@@ -136,12 +172,11 @@ Updated package.json tasks
 
 > [Link to page](https://npm.io/package/mrm)
 
-
 #### Jest
 
 Install Jest for unit testing
 
-```
+```md
 npm i -D jest@29.2.0
 ```
 
@@ -157,7 +192,7 @@ Updated package.json scripts
 
 Install eslint jest plugin
 
-```
+```md
 npm i -D eslint-plugin-jest
 ```
 
@@ -194,7 +229,7 @@ Update eslint configuration
 
 Install Babel
 
-```
+```md
 npm -D install @babel/core@7.19.3 @babel/preset-env@7.19.4
 ```
 
@@ -212,7 +247,7 @@ Add babel.config.json and add configuration
 
 Install Cypress for end to end testing
 
-```
+```md
 npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
 ```
 
