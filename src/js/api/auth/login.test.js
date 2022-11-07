@@ -1,8 +1,10 @@
+require('dotenv/config');
+
 import { login } from './login';
 import { index } from '../../storage/index.test';
 
-const userEmail = 'ChrTon31899@stud.noroff.no';
-const userPassword = 'VolvoXc70';
+const userEmail = process.env.API_EMAIL;
+const userPassword = process.env.API_PASSWORD;
 
 const data = { email: userEmail, password: userPassword };
 

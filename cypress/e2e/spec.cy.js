@@ -10,6 +10,7 @@ describe('Closing modal', () => {
       .should('be.visible')
       .find('.modal-footer')
       .find('button[type="reset"]')
+      .should('contain', 'Close')
       .click();
   });
 });
@@ -20,11 +21,14 @@ describe('Logging user in', () => {
   });
 
   it('Logging in user', () => {
-    cy.find('#loginForm')
+    const email = 'ChrTon31899@stud.noroff.no';
+    const password = 'VolvoXc70!';
+
+    cy.get('#loginForm')
       .find('#loginEmail')
-      .type('ChrTon31899@stud.noroff.no')
+      .type(email)
       .find('#loginPassword')
-      .type('VolvoXc70!')
+      .type(`${password}{enter}`)
       .get('.modal-footer')
       .find('button[data-bs-dismiss="modal"]')
       .click();
