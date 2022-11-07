@@ -5,6 +5,7 @@ describe('The Home Page', () => {
   });
 });
 
+// Closing register modal, don't know hwy this comes up when loading the page
 describe('Closing register modal', () => {
   it('Closing modal', () => {
     cy.get('#registerModal')
@@ -47,13 +48,6 @@ describe('Testing login with incorrect email', () => {
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
       .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
   });
-
-  // Trow alert
-  it('Throw alert', () => {
-    cy.on('window:alert', (text) => {
-      expect(text).to.eq('Wrong input data...');
-    });
-  });
 });
 
 // Login testing with incorrect credentials
@@ -84,13 +78,6 @@ describe('Testing login with incorrect password and Email', () => {
       .wait(2000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
       .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
-  });
-
-  // Trow alert
-  it('Throw alert', () => {
-    cy.on('window:alert', (text) => {
-      expect(text).to.eq('Wrong input data...');
-    });
   });
 });
 
@@ -142,11 +129,5 @@ describe('Logging out', () => {
       .should('contain', 'Close')
       .click()
       .wait(500);
-  });
-
-  it('Throw alert', () => {
-    cy.on('window:alert', (text) => {
-      expect(text).to.eq('You are logged out :D');
-    });
   });
 });

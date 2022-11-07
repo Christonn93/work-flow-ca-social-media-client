@@ -78,10 +78,17 @@ describe('Testing login with correct input values and creating new post', () => 
       .wait(200)
       .get('#postBody')
       .should('exist')
-      .type('This have been created with cypress testing')
-      // Posting the new post
-      .get('button[data-action="submit"]')
-      .click()
-      .wait(2000);
+      .type('This have been created with cypress testing');
+
+    /**
+     * Uncomment this section for the test.
+     * Been commented out not to spam the API with new posts
+     */
+
+    // Posting the new post
+
+    //.get('button[data-action="submit"]')
+    //.click()
+    //.wait(2000);
   });
 });
