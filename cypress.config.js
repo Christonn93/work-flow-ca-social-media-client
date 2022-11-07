@@ -8,7 +8,7 @@ module.exports = defineConfig({
     video: false,
     setupNodeEvents(on, config) {
       config.env = {
-        baseUrl: 'http://localhost:5500/',
+        baseUrl: 'http://127.0.0.1:5173/',
         ...process.env,
         ...config.env,
       };
