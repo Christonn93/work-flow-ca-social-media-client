@@ -80,58 +80,56 @@ describe('Testing login with incorrect password and Email', () => {
       .url()
       .should('not.include', 'profile');
   });
+});
 
-  // Login testing with correct credentials
-  describe('Testing login with correct input values', () => {
-    const email = Cypress.env('API_EMAIL');
-    const password = Cypress.env('API_PASSWORD');
+// Login testing with correct credentials
+describe('Testing login with correct input values', () => {
+  const email = Cypress.env('API_EMAIL');
+  const password = Cypress.env('API_PASSWORD');
 
-    it('Open login modal', () => {
-      cy.get('header').find('button[data-auth="login"]').click();
-    });
-
-    it('Adding login credentials', () => {
-      cy.get('#loginForm').wait(500);
-      cy.get('#loginEmail')
-        .clear()
-        .wait(500)
-        .type(`${email}`)
-        .wait(500)
-        .get('#loginPassword')
-        .clear()
-        .type(`${password}`)
-        .wait(500)
-        .get('.modal-footer')
-        .find('button')
-        .contains('Login')
-        .click()
-        .wait(2000)
-        .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
-        .then(
-          () => expect(window.localStorage.getItem('profile')).to.not.be.null
-        )
-        .url()
-        .should('include', 'profile');
-    });
-
-    it('Open new form', () => {
-      cy.get('footer')
-        .wait(500)
-        .find('a')
-        .contains('New Post')
-        .wait(200)
-        .click()
-        .visit('/?view=post');
-    });
+  it('Open login modal', () => {
+    cy.get('header').find('button[data-auth="login"]').click();
   });
 
-  // Logout testing
-  // describe('Logging out', () => {
-  //   it('successfully loads', () => {
-  //     cy.visit('/')
-  //     .wait(2000)
-  //     .get('button[data-auth="logout"]')
-  //     .click();
-  //   });
-  // });
+  it('Adding login credentials', () => {
+    cy.get('#loginForm').wait(500);
+    cy.get('#loginEmail')
+      .clear()
+      .wait(500)
+      .type(`${email}`)
+      .wait(500)
+      .get('#loginPassword')
+      .clear()
+      .type(`${password}`)
+      .wait(500)
+      .get('.modal-footer')
+      .find('button')
+      .contains('Login')
+      .click()
+      .wait(2000)
+      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
+      .url()
+      .should('include', 'profile');
+  });
+
+  it('Open new form', () => {
+    cy.get('footer')
+      .wait(500)
+      .find('a')
+      .contains('New Post')
+      .wait(200)
+      .click()
+      .visit('/?view=post');
+  });
 });
+
+// Logout testing
+// describe('Logging out', () => {
+//   it('successfully loads', () => {
+//     cy.visit('/')
+//     .wait(2000)
+//     .get('button[data-auth="logout"]')
+//     .click();
+//   });
+// });
