@@ -330,7 +330,7 @@ module.exports = defineConfig({
 
 Create .env file in root and add, filling it with your own details for Cypress testing
 
-```md
+```env
 API_EMAIL=*Add your email for the api here* **Email saved on github secrets**
 API_PASSWORD=*Add your password for the api here* **Password saved on github secrets**
 ```
