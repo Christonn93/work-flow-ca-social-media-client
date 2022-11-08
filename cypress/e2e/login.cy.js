@@ -21,7 +21,7 @@ describe('Closing register modal', () => {
 
 // Login testing with incorrect credentials
 describe('Testing login with incorrect email', () => {
-  const email = 'fakeemail@fakeEmail.com';
+  const email = 'fakeemail@noroff.no';
   const password = Cypress.env('API_PASSWORD');
 
   it('Open login modal', () => {
@@ -32,12 +32,10 @@ describe('Testing login with incorrect email', () => {
     cy.get('#loginForm')
       .wait(500)
       .get('#loginEmail')
-      .clear()
       .wait(500)
       .type(`${email}`)
       .wait(500)
       .get('#loginPassword')
-      .clear()
       .type(`${password}`)
       .wait(500)
       .get('.modal-footer')
@@ -46,7 +44,10 @@ describe('Testing login with incorrect email', () => {
       .click()
       .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null)
+      .wait(300)
+      .url()
+      .should('include', 'profile');
   });
 });
 
@@ -54,6 +55,22 @@ describe('Testing login with incorrect email', () => {
 describe('Testing login with incorrect password and Email', () => {
   const email = 'fakeemail@fakeEmail.com';
   const password = 'pass';
+
+  it('successfully loads', () => {
+    cy.visit('/');
+    cy.clearLocalStorage();
+  });
+
+  it('Closing modal', () => {
+    cy.get('#registerModal')
+      .should('be.visible')
+      .find('.modal-footer')
+      .find('button[type="reset"]')
+      .wait(500)
+      .should('contain', 'Close')
+      .click()
+      .wait(500);
+  });
 
   it('Open login modal', () => {
     cy.get('header').find('button[data-auth="login"]').click();
@@ -67,6 +84,7 @@ describe('Testing login with incorrect password and Email', () => {
       .type(`${email}`)
       .wait(500)
       .get('#loginPassword')
+      .wait(500)
       .type(`${password}`)
       .wait(500)
       .get('.modal-footer')
@@ -75,7 +93,10 @@ describe('Testing login with incorrect password and Email', () => {
       .click()
       .wait(1000)
       .then(() => expect(window.localStorage.getItem('token')).to.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.be.null);
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null)
+      .wait(300)
+      .url()
+      .should('include', 'profile');
   });
 });
 
