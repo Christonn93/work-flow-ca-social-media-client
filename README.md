@@ -23,6 +23,8 @@ This project have a lot fo dependencies that need to set up. If any if them is f
 
 After downloading the zip file run `npm init`, this should start up with installing the dependencies for this project.
 
+Run `git init` to initialize git in the project folder to avoid errors related to husky setup.  
+
 If the style is not showing up, make sure to run `npm run build`. This will run the build script to create css from scss files.
 When working with the project and doing style changes, its recommended to run `npm run start`. This will run a script that is watching the changes that is done and applying changes on save of the file.
 
