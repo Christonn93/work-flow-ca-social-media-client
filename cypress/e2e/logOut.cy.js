@@ -5,6 +5,20 @@ describe('The Home Page', () => {
   });
 });
 
+// Closing register modal, don't know hwy this comes up when loading the page
+describe('Closing register modal', () => {
+  it('Closing modal', () => {
+    cy.get('#registerModal')
+      .should('be.visible')
+      .find('.modal-footer')
+      .find('button[type="reset"]')
+      .wait(500)
+      .should('contain', 'Close')
+      .click()
+      .wait(500);
+  });
+});
+
 // Logout testing
 describe('Testing login with correct input values', () => {
   const email = Cypress.env('API_EMAIL');
