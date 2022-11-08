@@ -44,8 +44,8 @@ describe('Testing login with correct input values and creating new post', () => 
       .contains('Login')
       .click()
       .wait(2000)
-      .then(() => expect(window.localStorage.getItem('token')).to.not.be.null)
-      .then(() => expect(window.localStorage.getItem('profile')).to.not.be.null)
+      .then(() => expect(window.localStorage.getItem('token')).to.be.null)
+      .then(() => expect(window.localStorage.getItem('profile')).to.be.null)
       .url()
       .should('include', 'profile');
 
