@@ -9,7 +9,7 @@
 This project is my delivery for the Course Assignment in Workflow from Noroff.
 It's meant **to improve the quality of an existing environment by establishing useful workflows that make the development process more efficient**
 
-The assignment is going over how to work inside the terminal, how to plan and setup your own work environment. The project is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://pages.github.com/).
+The assignment is going over how to work inside the terminal, how to plan and setup your own work environment. The project is using github actions to run testing of some part of the code, and deploy the changes made to the code on to [github pages](https://christonn93.github.io/work-flow-ca-social-media-client/).
 
 The code in the project repository is **forked** from a teachers repository and is meant to be illustrating how the student's could have created the course assignment from javascript 2.
 
