@@ -42,12 +42,10 @@ describe('Login', () => {
 });
 
 // THIS should test if the function for failure. By adding this a error comes up. Issue on this is create.
-
-/* describe('Login', () => {
+/*describe('Login', () => {
   it('Success', async () => {
     global.fetch = jest.fn(() => fetchFailure());
     const item = await login(data);
     expect(item).toBe(data);
   });
-});
-*/
+}); */
