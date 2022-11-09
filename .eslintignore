@@ -1,0 +1,7 @@
+/src/js/api/auth/login.test.js
+/src/js/api/auth/logout.test.js
+
+/src/js/storage/index.test.js
+/src/js/storage/save.test.js
+/src/js/storage/remove.test.js
+/src/js/storage/load.test.js
