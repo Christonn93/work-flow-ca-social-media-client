@@ -7,14 +7,11 @@ const tags = ['tag-1', 'tag-2'];
 
 const data = { title, body, media, tags };
 
-function fetchSuccess(
-  status = 201,
-  statusText = 'All good! Take a nice coffee and relax'
-) {
+function fetchSuccess() {
   return Promise.resolve({
     ok: true,
-    status,
-    statusText,
+    status: 201,
+    statusText: 'All good! Take a nice coffee and relax',
     json: () => Promise.resolve(data),
   });
 }
@@ -22,7 +19,7 @@ function fetchSuccess(
 describe('Create post', () => {
   it('Success', async () => {
     global.fetch = jest.fn(() => fetchSuccess());
-    const item = await createPost(data);
-    expect(item).toBe(data);
+    const test = await createPost(data);
+    expect(test).toBe(data);
   });
 });
