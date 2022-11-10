@@ -1,3 +1,4 @@
 # Add files here that you want esLint to ignore
 
-- You will need to add the path to the file you want esLint to ignore.
+*You will need to add the path to the file you want esLint to ignore.*
+*Example: /src/js/api/auth/login.test.js*
