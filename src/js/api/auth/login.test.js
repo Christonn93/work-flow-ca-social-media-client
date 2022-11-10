@@ -3,25 +3,18 @@ require('dotenv/config');
 import { login } from './login';
 import * as storage from '../../storage/index.js';
 
-// Correct login details
-const userEmail = process.env.API_EMAIL;
-const userPassword = process.env.API_PASSWORD;
-const userToken =
-  'gdfsgfdsgs2eysadfasaJhbGciOiJdfdsfdsfsdfwqrfIUdfdsfzI1NidfsfdsfIsInsdfdsfdsgfsdgR5c';
-const data = { email: userEmail, password: userPassword };
-
-const mockResponse = {
-  name: 'Christopher',
-  email: process.env.API_EMAIL,
-  banner: null,
-  avatar: null,
-  accessToken: userToken,
-  password: process.env.API_PASSWORD,
-};
-
 // Mock login details
 const mockEmail = 'email@email.com';
 const mockPassword = '1234';
+const mockResponse = {
+  name: 'The ultimate code master',
+  email: 'email@email.com',
+  avatar:
+    'https://media.wired.co.uk/photos/607d91994d40fbb952b6ad64/4:3/w_2664,h_1998,c_limit/wired-meme-nft-brian.jpg',
+  banner: 'https://media.snl.no/media/178025/standard_Grumpy_Cat.jpg',
+  accessToken: 'gdfsgfdsgs2eysadfasaJhbGciOiJdfdsfdsfsdfwqrfIUdfdsfz',
+  password: '1234',
+};
 const mockData = { email: mockEmail, password: mockPassword };
 
 // Function to retrieve a success login
@@ -30,7 +23,7 @@ function fetchSuccess() {
     ok: true,
     status: 201,
     statusText: 'All good! Take a nice coffee and relax',
-    json: () => Promise.resolve(data),
+    json: () => Promise.resolve(mockResponse),
   });
 }
 
@@ -71,12 +64,17 @@ global.localStorage = new LocalStorageMock();
 describe('Authorization of user', () => {
   it('Login is a success', async () => {
     global.fetch = jest.fn(() => fetchSuccess());
-    const response = await login(data);
-    const token = storage.save('token', userToken);
-    const profile = storage.save('profile', data);
+    const response = await login(mockEmail, mockPassword);
+    const token = storage.save('token', mockResponse.mockToken);
+    const profile = storage.save(
+      'profile',
+      mockResponse.name,
+      mockResponse.avatar,
+      mockResponse.banner,
+      mockResponse.email
+    );
     localStorage.setItem(token, profile);
-    console.log(localStorage);
-    expect(response).toBe(mockResponse);
+    expect(response).toEqual(mockResponse);
   });
 
   it('Login is a failure', async () => {
