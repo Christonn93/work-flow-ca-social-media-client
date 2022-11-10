@@ -1,17 +1,35 @@
 import { logout } from './logout';
-import { index } from '../../storage/index.test';
+import * as storage from '../../storage/index.js';
 
-const storage = index;
+// Mock localstorage
+class LocalStorageMock {
+  constructor() {
+    this.value = {};
+  }
 
-const token = storage;
-const profile = storage;
+  clear() {
+    this.value = {};
+  }
 
-const data = { token, profile };
+  getItem(token) {
+    return this.value[token] || null;
+  }
 
-describe('Logout', () => {
-  it('Success', async () => {
-    global.fetch = jest.fn(() => fetchSuccess());
-    const item = logout(data);
-    expect(item).toBe(null || undefined);
+  setItem(token, value) {
+    this.value[token] = String(value);
+  }
+
+  removeItem(token) {
+    delete this.value[token];
+  }
+}
+
+global.localStorage = new LocalStorageMock();
+
+describe('Logout the user', () => {
+  it('Logout is a success', () => {
+    logout();
+    const token = localStorage.getItem('token');
+    expect(token).toBe(null);
   });
 });
